@@ -233,8 +233,8 @@ namespace WebVisita
             txtPersonal.ReadOnly = false;
             txtCedula.ReadOnly = false;
             txtNombre.ReadOnly = false;
-            imgPersonal.ImageUrl = "http://172.16.7.240/FotosVisitas/crm.gif";
-            imgVisitado.ImageUrl = "http://172.16.7.240/FotosVisitas/crm.gif";
+            imgPersonal.ImageUrl = "http://172.16.7.240:8087/FotosVisitas/crm.gif";
+            imgVisitado.ImageUrl = "http://172.16.7.240:8087/FotosVisitas/crm.gif";
             CargarAsuntos();
             txtOrganismo.Focus();
 
@@ -294,12 +294,12 @@ namespace WebVisita
 
         protected void ButtonTest_Click(object sender, EventArgs e)
         {
-            imgPersonal.ImageUrl = "http://172.16.7.240/FotosVisitas/" + hdnCedula.Value + ".jpg";
+            imgPersonal.ImageUrl = "http://172.16.7.240:8087/FotosVisitas/" + hdnCedula.Value + ".jpg";
         }
 
         protected void ButtonTest2_Click(object sender, EventArgs e)
         {
-            imgVisitado.ImageUrl = "http://172.16.7.240/Fotos/" + hdnCedulaPersonal.Value + ".jpg";
+            imgVisitado.ImageUrl = "http://172.16.7.240:8087/Fotos/" + hdnCedulaPersonal.Value + ".jpg";
         }
     }
 }
