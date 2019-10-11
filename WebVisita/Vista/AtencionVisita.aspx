@@ -302,7 +302,7 @@ BODY {
                   </asp:TemplateField>
                    <asp:TemplateField HeaderText="Foto" HeaderStyle-Width="100" HeaderStyle-Height ="20">
                       <ItemTemplate>
-                          <asp:Image runat="server" ID="imgFoto" ImageUrl= '<%# "http://172.16.7.240/FotosVisitas/" +  Eval("CedulaVisitante") + ".jpg"%>' Width="50" Height="50"></asp:Image>
+                          <asp:Image runat="server" ID="imgFoto" ImageUrl= '<%# "http://172.16.7.240:8087/FotosVisitas/" +  Eval("CedulaVisitante") + ".jpg"%>' Width="50" Height="50"></asp:Image>
                       </ItemTemplate>
                   </asp:TemplateField>
 
