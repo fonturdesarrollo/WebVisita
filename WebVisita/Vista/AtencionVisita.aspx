@@ -121,7 +121,7 @@ BODY {
             document.getElementById("txtCedula").value = "";
             document.getElementById("txtNombre").value = "";
             document.getElementById("txtTelefono").value = "";
-            document.getElementById("txtOrganismo").value = "";
+            document.getElementById("txtOrganismo").value = "NO DISPONIBLE";
             document.getElementById("imgPersonal").setAttribute('src', "../Images/crm.gif");
             document.getElementById("imgVisitado").setAttribute('src', "../Images/crm.gif");
 
@@ -133,6 +133,8 @@ BODY {
             document.getElementById("hdnPersonalID").value = "0";
             document.getElementById("txtPersonal").value = "";
             var campo = document.getElementById('<%=txtPersonal.ClientID%>');
+            var txtControl = document.getElementById('txtCedula');
+            txtControl.focus();      
             campo.readOnly = false;
         }
 
@@ -173,7 +175,7 @@ BODY {
                         <asp:Label Text="Organismo Remitente" ID="Label5" runat="server" AssociatedControlID="txtOrganismo" />
                     </td>
                     <td class="auto-style2">
-                        <asp:TextBox runat="server" ID="txtOrganismo" onkeypress="return event.keyCode!=13;" MaxLength="200" Width="520px"></asp:TextBox>
+                        <asp:TextBox runat="server" ID="txtOrganismo" onkeypress="return event.keyCode!=13;" MaxLength="200" Width="520px" Text="NO DISPONIBLE"></asp:TextBox>
                         <asp:HiddenField runat ="server" ID ="hdnOrganismoID"  Value="0"/> 
                         <ASP:RequiredFieldValidator id="rqrValidaOrganismo" runat="server" errormessage="Debe colocar el nombre del organismo" width="132px" controltovalidate="txtOrganismo" display="Dynamic" ForeColor ="Red"></ASP:RequiredFieldValidator>
                       </td>

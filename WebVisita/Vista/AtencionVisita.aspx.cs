@@ -19,7 +19,7 @@ namespace WebVisita
             this.txtTelefono.Attributes.Add("onkeypress", "javascript:return SoloNumeros(event); ");
             if (!IsPostBack)
             {
-                txtOrganismo.Focus();
+                txtCedula.Focus();
                 CargarDetalleVisitasDia();
                 CargarAsuntos();
             }
@@ -220,7 +220,6 @@ namespace WebVisita
         }
         private void LimpiarControles()
         {
-            txtOrganismo.Text = "";
             txtNombre.Text = "";
             txtCedula.Text = "";
             txtTelefono.Text = "";
@@ -236,7 +235,8 @@ namespace WebVisita
             imgPersonal.ImageUrl = "http://172.16.7.240:8087/FotosVisitas/crm.gif";
             imgVisitado.ImageUrl = "http://172.16.7.240:8087/FotosVisitas/crm.gif";
             CargarAsuntos();
-            txtOrganismo.Focus();
+            txtOrganismo.Text = "NO DISPONIBLE";
+            txtCedula.Focus();
 
 
         }
